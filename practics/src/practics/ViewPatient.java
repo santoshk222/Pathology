@@ -26,9 +26,10 @@ public class ViewPatient {
 		try{
 			PreparedStatement ps = cc.prepareStatement(s);
 			ResultSet rs = ps.executeQuery();
-			rs.last();
-			cnt = rs.getRow();
-			rs.beforeFirst();
+//			rs.last();
+//			cnt = rs.getRow();
+			cnt=50;
+//			rs.beforeFirst();
 			data = new String[cnt][10];
 			while(rs.next()){
 				data[r][c] = String.valueOf(rs.getInt("rid"));
