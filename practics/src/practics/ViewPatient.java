@@ -23,12 +23,12 @@ public class ViewPatient {
 		columns = new String[]{"Registration ID","Patient Name","Father Name","Age",
 				"Gender","Mobile No.","Address","Paid Amount","Due Amount","Tests"};
 		Connection cc = MyConnection.connect();
-		try{
-			PreparedStatement ps = cc.prepareStatement(s);
+		try{PreparedStatement ps = cc.prepareStatement(s);
 			ResultSet rs = ps.executeQuery();
-			rs.last();
-			cnt = rs.getRow();
-			rs.beforeFirst();
+//			rs.last();
+//			cnt = rs.getRow();
+			cnt=50;
+//			rs.beforeFirst();
 			data = new String[cnt][10];
 			while(rs.next()){
 				data[r][c] = String.valueOf(rs.getInt("rid"));
