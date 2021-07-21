@@ -25,9 +25,7 @@ public class ViewsTests {
 		try{
 			PreparedStatement ps = cc.prepareStatement(s);
 			ResultSet rs = ps.executeQuery();
-			rs.last();
-			cnt = rs.getRow();
-			rs.beforeFirst();
+			cnt = 50;
 			data = new String[cnt][6];
 			while(rs.next()){
 				data[r][c] = rs.getString("tname");
